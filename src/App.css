@@ -1,0 +1,107 @@
+/* ==========================================================================
+   App-Level Layout & Colophon — Retro Game Pocket Canvas
+   ========================================================================== */
+
+.atlas-app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-lavender);
+  color: var(--ink-primary);
+  position: relative;
+}
+
+.atlas-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Retro Colophon Footer */
+.atlas-colophon {
+  background: var(--card-white);
+  border-top: var(--retro-border);
+  margin-top: auto;
+  padding: 1.75rem 1.5rem 2rem;
+}
+
+.colophon-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.colophon-bottom-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-field-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 1.35rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: var(--card-white);
+  border: var(--retro-border);
+  border-radius: 9999px;
+  box-shadow: var(--retro-shadow-sm);
+  color: var(--ink-primary);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.footer-field-guide-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 4px 0px #161b26;
+  background: #ede9fe;
+  color: var(--arcade-violet);
+}
+
+.footer-field-guide-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #161b26;
+}
+
+.footer-guide-icon {
+  font-size: 1.05rem;
+}
+
+.colophon-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.colophon-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--ink-primary);
+}
+
+.colophon-motto {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--arcade-violet);
+}
+
+@media (max-width: 680px) {
+  .colophon-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .colophon-brand {
+    align-items: flex-start;
+  }
+}

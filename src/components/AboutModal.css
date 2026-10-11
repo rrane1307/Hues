@@ -1,0 +1,157 @@
+/* About Modal — Retro Game Player's Guide */
+.about-game-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 24, 36, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 4000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.about-game-card {
+  max-width: 640px;
+  width: 100%;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-white);
+}
+
+.about-card-header {
+  padding: 1.25rem 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--retro-border-thin);
+  background: var(--bg-lavender-subtle);
+}
+
+.about-badge-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.about-close-btn {
+  font-size: 1.25rem;
+  color: var(--ink-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cbd5e1;
+}
+
+.about-close-btn:hover {
+  background: #fee2e2;
+  color: #e11d48;
+}
+
+.about-card-body {
+  padding: 1.75rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.about-dialog-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-game-title {
+  font-family: var(--font-pixel-display);
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: var(--ink-primary);
+}
+
+.about-game-quote {
+  font-size: 0.75rem;
+  color: var(--arcade-violet);
+  font-weight: 700;
+}
+
+.about-game-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-secondary);
+}
+
+.section-game-subtitle {
+  font-size: 0.8125rem;
+  color: var(--ink-primary);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.game-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.game-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--bg-lavender-subtle);
+  border: var(--retro-border-thin);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+}
+
+.step-num-bubble {
+  flex: 0 0 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--arcade-cyan);
+  color: #fff;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #161b26;
+  font-weight: 700;
+}
+
+.privacy-game-callout {
+  background: #f0fdf4;
+  border: var(--retro-border-thin);
+  border-radius: 12px;
+  padding: 0.85rem 1.15rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  color: #166534;
+}
+
+.callout-game-icon {
+  font-size: 1.35rem;
+}
+
+.privacy-game-callout p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.about-card-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: var(--retro-border-thin);
+  display: flex;
+  justify-content: flex-end;
+  background: var(--bg-lavender-subtle);
+}

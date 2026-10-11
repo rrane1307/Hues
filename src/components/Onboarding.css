@@ -1,0 +1,139 @@
+/* Onboarding Dialog — Retro Game Player's Guide */
+.onboarding-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 24, 36, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.onboarding-game-card {
+  width: 100%;
+  max-width: 500px;
+  background: var(--card-white);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.onboarding-header {
+  padding: 1.15rem 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--retro-border-thin);
+  background: var(--bg-lavender-subtle);
+}
+
+.onboarding-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.onboarding-step-counter {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+}
+
+.onboarding-skip-btn {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  background: transparent;
+  padding: 0.25rem 0.5rem;
+}
+
+.onboarding-skip-btn:hover {
+  color: var(--ink-primary);
+}
+
+.onboarding-body {
+  padding: 2.25rem 2rem 1.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.onboarding-icon-plate {
+  width: 72px;
+  height: 72px;
+  background: var(--bg-lavender-subtle);
+  border: var(--retro-border-thin);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 2px 2px 0px #161b26;
+}
+
+.step-icon {
+  font-size: 2.25rem;
+}
+
+.onboarding-tag {
+  font-size: 0.75rem;
+  color: var(--arcade-violet);
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.onboarding-title {
+  font-family: var(--font-pixel-display);
+  font-size: 1.85rem;
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
+  color: var(--ink-primary);
+}
+
+.onboarding-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-secondary);
+  max-width: 400px;
+}
+
+.onboarding-progress-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.onboarding-progress-dots .dot {
+  width: 22px;
+  height: 6px;
+  background: #cbd5e1;
+  border-radius: 9999px;
+  border: 1px solid #161b26;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.onboarding-progress-dots .dot.active {
+  background: var(--arcade-cyan);
+  width: 38px;
+}
+
+.onboarding-footer {
+  padding: 1rem 1.5rem 1.25rem;
+  border-top: var(--retro-border-thin);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-lavender-subtle);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.75rem;
+}

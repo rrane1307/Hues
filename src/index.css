@@ -1,0 +1,213 @@
+/* ==========================================================================
+   HUES — NEO-ARCADE FIELD ATLAS
+   Very Light Lavender Substrate, Clean Readable Typography, Washi Tape Accents
+   ========================================================================== */
+
+:root {
+  /* Very Light Lavender Background */
+  --bg-lavender: #f4f0fa;
+  --bg-lavender-subtle: #f9f7fd;
+  --bg-lavender-tint: #eae3f7;
+  --card-white: #ffffff;
+  --card-dark-screen: #112723;
+
+  /* Cool Tone Accents */
+  --arcade-cyan: #0284c7;
+  --arcade-sky: #38bdf8;
+  --arcade-mint: #10b981;
+  --arcade-emerald: #059669;
+  --arcade-violet: #7c3aed;
+  --arcade-lavender: #8b5cf6;
+  --arcade-berry: #ec4899;
+  --arcade-amber: #d97706;
+
+  /* Chunky Neo-Arcade Outlines & Hard Shadows */
+  --retro-border: 2.5px solid #161b26;
+  --retro-border-thin: 1.5px solid #161b26;
+  --retro-border-dashed: 2px dashed #161b26;
+  --retro-shadow: 4px 5px 0px #161b26;
+  --retro-shadow-sm: 2.5px 3px 0px #161b26;
+  --retro-shadow-lg: 6px 7px 0px #161b26;
+  --retro-shadow-press: 1px 2px 0px #161b26;
+
+  /* Ink & Contrast */
+  --ink-primary: #121824;
+  --ink-secondary: #3e485b;
+  --ink-muted: #64748b;
+  --ink-light: #f8fafc;
+
+  /* Highly Legible Modern Typography */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  /* Aliases to guarantee all legacy references use crisp, readable modern fonts */
+  --font-pixel: var(--font-body);
+  --font-pixel-display: var(--font-display);
+
+  /* Tape Accent */
+  --tape-color: rgba(255, 255, 255, 0.78);
+  --tape-mint: rgba(209, 250, 229, 0.85);
+  --tape-lavender: rgba(237, 233, 254, 0.85);
+  --tape-cyan: rgba(224, 242, 254, 0.85);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-lavender);
+  color: var(--ink-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Subtle cool tone micro-grid background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+  z-index: 9999;
+}
+
+/* Typography Headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Chunky Cards — Clean Rounded Rectangles */
+.retro-card {
+  background: var(--card-white);
+  border: var(--retro-border);
+  border-radius: 20px;
+  box-shadow: var(--retro-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Washi Tape visuals removed per user request */
+.washi-tape-strip,
+.tape-corner,
+.tape-corner-right {
+  display: none !important;
+}
+
+/* Crisp & Clear Typography Helpers */
+.pixel-text {
+  font-family: var(--font-body) !important;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
+.pixel-label {
+  font-family: var(--font-display) !important;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Pills & Badges */
+.retro-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border: var(--retro-border-thin);
+  border-radius: 9999px;
+  background: var(--bg-lavender-subtle);
+  color: var(--ink-primary);
+  font-weight: 700;
+}
+
+.retro-pill.cyan { background: #e0f2fe; color: #0369a1; }
+.retro-pill.mint { background: #d1fae5; color: #047857; }
+.retro-pill.violet { background: #ede9fe; color: #6d28d9; }
+.retro-pill.amber { background: #fef3c7; color: #b45309; }
+
+/* Interactive 3D Buttons */
+button {
+  font-family: var(--font-display);
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn-retro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.75rem;
+  border: var(--retro-border);
+  border-radius: 9999px;
+  box-shadow: var(--retro-shadow);
+  color: #fff;
+  background: var(--arcade-cyan);
+  user-select: none;
+}
+
+.btn-retro:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--retro-shadow-lg);
+}
+
+.btn-retro:active {
+  transform: translate(3px, 4px);
+  box-shadow: var(--retro-shadow-press);
+}
+
+.btn-retro.mint { background: var(--arcade-mint); color: #064e3b; }
+.btn-retro.violet { background: var(--arcade-violet); color: #fff; }
+.btn-retro.white { background: var(--card-white); color: var(--ink-primary); }
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-lavender);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border: 1.5px solid #161b26;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--arcade-cyan);
+}

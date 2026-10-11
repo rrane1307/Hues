@@ -1,0 +1,423 @@
+/* Home Screen — Retro Game Pocket Canvas */
+.home-game-canvas {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+/* ==========================================================================
+   FIRST VISIT / EMPTY STATE
+   ========================================================================== */
+.home-quest-card {
+  max-width: 680px;
+  margin: 2rem auto 3.5rem;
+  text-align: center;
+  padding: 3.5rem 2.5rem 3rem;
+  background: var(--card-white);
+}
+
+.quest-header-pills {
+  display: flex;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.home-title-group {
+  margin-bottom: 1.25rem;
+}
+
+.home-pixel-brand,
+.home-hero-brand {
+  font-family: var(--font-display);
+  font-size: 3.85rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink-primary);
+  text-shadow: 3px 3px 0px rgba(124, 58, 237, 0.2);
+  margin-bottom: 0.4rem;
+}
+
+.home-pixel-tagline,
+.home-hero-tagline {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+}
+
+/* Retro Pixel Color Dots */
+.retro-swatch-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 1.5rem auto 2rem;
+}
+
+.pixel-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid #161b26;
+  box-shadow: 2px 2px 0px #161b26;
+  transition: transform 0.15s ease;
+}
+
+.pixel-dot:hover {
+  transform: translateY(-3px) scale(1.15);
+}
+
+.quest-body-box {
+  background: var(--bg-lavender-subtle);
+  border: var(--retro-border-thin);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2.25rem;
+}
+
+.quest-callout-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--arcade-violet);
+  margin-bottom: 0.75rem;
+}
+
+.quest-prose {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+}
+
+.prose-accent {
+  font-weight: 600;
+  color: var(--ink-primary);
+  margin: 0.35rem 0;
+}
+
+.prose-prompt {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--arcade-cyan);
+  margin-top: 0.65rem;
+}
+
+.quest-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.quest-footer {
+  border-top: 2px dashed #cbd5e1;
+  padding-top: 1.25rem;
+}
+
+.footer-motto {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink-muted);
+}
+
+/* ==========================================================================
+   RETURNING VISIT STATE — COLLECTION HUB
+   ========================================================================== */
+.home-collection-hub {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hub-header-card {
+  padding: 2.25rem;
+}
+
+.hub-top-pills {
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.hub-headline {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  color: var(--ink-primary);
+  margin-bottom: 0.35rem;
+}
+
+.hub-subtext {
+  font-size: 1.1rem;
+  color: var(--ink-secondary);
+  margin-bottom: 1.75rem;
+}
+
+.hub-primary-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Inventory Strip Card */
+.inventory-strip-card {
+  padding: 1.35rem 1.6rem;
+}
+
+.strip-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.strip-title {
+  font-size: 0.75rem;
+  color: var(--ink-primary);
+  font-weight: 700;
+}
+
+.strip-hint {
+  font-size: 0.6875rem;
+  color: var(--arcade-cyan);
+}
+
+.retro-inventory-grid {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.inventory-slot-btn {
+  flex: 0 0 54px;
+  height: 64px;
+  border-radius: 12px;
+  border: 2px solid #161b26;
+  box-shadow: 2px 3px 0px #161b26;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 4px;
+  position: relative;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.inventory-slot-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 3px 6px 0px #161b26;
+  z-index: 5;
+}
+
+.slot-number {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Recent Cards Section */
+.recent-cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.recent-section-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-pixel-title {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--ink-primary);
+  text-transform: uppercase;
+}
+
+.btn-view-all-link {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  color: var(--arcade-cyan);
+  font-weight: 700;
+  padding: 0;
+}
+
+.btn-view-all-link:hover {
+  text-decoration: underline;
+}
+
+.retro-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.retro-game-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.retro-game-card:hover {
+  transform: translate(-2px, -3px);
+  box-shadow: var(--retro-shadow-lg);
+}
+
+.card-rarity-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem 0.5rem;
+  background: var(--bg-lavender-subtle);
+  border-bottom: var(--retro-border-thin);
+}
+
+.card-rarity-tag {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  color: var(--arcade-cyan);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.card-vibe-tag {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--arcade-violet);
+  padding: 2px 7px;
+  background: #ede9fe;
+  border-radius: 9999px;
+  border: 1px solid #161b26;
+  font-weight: 700;
+}
+
+.card-screen-swatch {
+  height: 150px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-bottom: var(--retro-border-thin);
+}
+
+.swatch-overlay-chip {
+  padding: 0.25rem 0.6rem;
+  background: rgba(22, 27, 38, 0.8);
+  border: 1.5px solid #fff;
+  border-radius: 9999px;
+}
+
+.overlay-hex {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.card-text-body {
+  padding: 1.15rem 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.card-meta-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-ref-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--arcade-violet);
+  font-weight: 700;
+}
+
+.card-date-text {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.card-color-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ink-primary);
+  margin-top: 2px;
+}
+
+.card-source-snippet {
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+}
+
+.card-note-bubble {
+  font-size: 0.875rem;
+  color: var(--ink-primary);
+  background: var(--bg-lavender-subtle);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+/* Curiosities card */
+.home-curiosities-card {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: #f0fdf4;
+}
+
+.curiosity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.curiosity-text {
+  font-size: 0.95rem;
+  color: #166534;
+}
+
+@media (max-width: 640px) {
+  .home-quest-card {
+    padding: 2.5rem 1.25rem;
+  }
+  .home-pixel-brand {
+    font-size: 2.75rem;
+  }
+  .hub-headline {
+    font-size: 1.85rem;
+  }
+  .retro-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

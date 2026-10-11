@@ -1,0 +1,234 @@
+/* Header Styling — Retro Game HUD */
+.game-hud-header {
+  width: 100%;
+  background: var(--bg-lavender);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.hud-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hud-brand {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  user-select: none;
+  transition: transform 0.15s ease;
+}
+
+.hud-brand:hover {
+  transform: translateY(-1px);
+}
+
+.brand-header-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 2px;
+}
+
+.brand-category-chip {
+  font-family: var(--font-display);
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--arcade-violet);
+  background: #ede9fe;
+  padding: 0.12rem 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid #161b26;
+  box-shadow: 1px 1px 0px #161b26;
+}
+
+.brand-edition-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  letter-spacing: 0.04em;
+}
+
+.brand-main-anchor {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-chroma-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #ffffff;
+  border: var(--retro-border-thin);
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px #161b26;
+  position: relative;
+  overflow: hidden;
+}
+
+.mark-pip {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid #161b26;
+  opacity: 0.9;
+}
+
+.mark-pip.p-cyan {
+  background: var(--arcade-sky);
+  top: 4px;
+  left: 4px;
+}
+
+.mark-pip.p-mint {
+  background: var(--arcade-mint);
+  top: 4px;
+  right: 4px;
+}
+
+.mark-pip.p-violet {
+  background: var(--arcade-lavender);
+  bottom: 3px;
+  left: 9px;
+}
+
+.brand-title-standout {
+  font-family: var(--font-display);
+  font-size: 2.35rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink-primary);
+  text-shadow: 2.5px 2.5px 0px rgba(124, 58, 237, 0.22);
+}
+
+.brand-tagline-text {
+  font-family: var(--font-body);
+  font-size: 0.73rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  letter-spacing: 0.01em;
+  margin-top: 3px;
+}
+
+/* Nav Pills */
+.hud-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.hud-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  background: var(--card-white);
+  border: var(--retro-border-thin);
+  border-radius: 9999px;
+  box-shadow: var(--retro-shadow-sm);
+  color: var(--ink-primary);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.hud-pill-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 4px 0px #161b26;
+}
+
+.hud-pill-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #161b26;
+}
+
+.hud-pill-btn.active {
+  background: #ede9fe;
+  border-color: #161b26;
+  color: var(--arcade-violet);
+}
+
+.btn-find-color {
+  background: var(--arcade-cyan);
+  color: #fff;
+  border-color: #161b26;
+}
+
+.btn-find-color:hover {
+  background: #0284c7;
+  color: #fff;
+}
+
+.btn-find-color.active {
+  background: #0369a1;
+  color: #fff;
+}
+
+.hud-icon {
+  font-size: 0.95rem;
+}
+
+.hud-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hud-count {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.1rem 0.5rem;
+  background: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #161b26;
+  border-radius: 9999px;
+  font-weight: 700;
+}
+
+.hud-count.mint {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.hud-bottom-border {
+  width: 100%;
+  height: 2.5px;
+  background: #161b26;
+}
+
+@media (max-width: 768px) {
+  .hud-container {
+    padding: 0.85rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .hud-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .hud-pill-btn {
+    padding: 0.35rem 0.65rem;
+  }
+  .hud-label {
+    font-size: 0.625rem;
+  }
+}
